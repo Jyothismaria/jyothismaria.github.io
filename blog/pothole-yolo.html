@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pothole Detection with YOLOv11 — Jyothismaria Joseph</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <nav>
+    <span class="nav-initials">jj</span>
+    <div class="nav-links">
+      <a href="../index.html">home</a>
+      <a href="../projects.html">projects</a>
+      <a href="../blog.html" class="active">blog</a>
+    </div>
+  </nav>
+  <main class="post-layout">
+    <a href="../blog.html" class="back-link">← back to blog</a>
+    <div class="post-header">
+      <div class="blog-meta"><span class="blog-date">April 2026</span><span class="blog-tag">Computer Vision</span></div>
+      <h1>Building a Two-Stage Pothole Detection Pipeline with YOLOv11</h1>
+      <p class="post-subtitle">From annotating 1,982 images to a two-stage detection-classification pipeline. What worked, what broke, and what Blender taught me.</p>
+    </div>
+    <div class="post-body">
+      <p>This project started as a fairly standard object detection task and turned into a deep lesson in why severity classification is fundamentally harder than binary detection — and how synthetic data can both help and mislead you.</p>
+      <h2>The dataset problem</h2>
+      <p>There is no good public pothole severity dataset. So we built one: 1,982 images, 5,021 labeled potholes, two severity classes (major and medium). Annotation work is unglamorous but it taught me that label quality directly determines what the model can and cannot learn. Defining "major" vs "medium" consistently across 2,000 images requires more upfront alignment than you'd expect — and ambiguous class definitions show up immediately in your confusion matrices.</p>
+      <h2>Why two stages?</h2>
+      <p>Single-stage severity-aware detection underperformed on medium-severity cases. The two-stage approach — YOLOv11 for detection, YOLOv8-cls for severity classification — let each model specialize. Medium-severity recall went from 0.62 to 0.78 after the split.</p>
+      <h2>Synthetic data via Blender</h2>
+      <p>We generated synthetic labeled imagery in Blender to test depth-estimation limitations for small potholes. The honest finding: synthetic imagery helped volume but introduced distribution shift. Models trained on too much synthetic data got worse on real-world rainy and low-visibility conditions.</p>
+      <h2>Final numbers</h2>
+      <p>Binary detection: 0.941 precision, 0.894 recall. Severity-aware: up to 0.737 precision and 0.670 mAP@50. The gap between binary and severity performance is the real story — severity is a much harder problem.</p>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <strong>contact</strong>
+      <div class="footer-links">
+        <a href="mailto:jyothismaria2002@gmail.com">jyothismaria2002@gmail.com</a>
+        <a href="https://linkedin.com/in/jyothismaria" target="_blank">linkedin</a>
+        <a href="https://github.com/Jyothismaria" target="_blank">github</a>
+        <a href="tel:+19146193612">+1(914)619-3612</a>
+        <a href="../resume.pdf" target="_blank" class="resume-link">resumes</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

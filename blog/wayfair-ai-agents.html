@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What I Built at Wayfair — Jyothismaria Joseph</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <nav>
+    <span class="nav-initials">jj</span>
+    <div class="nav-links">
+      <a href="../index.html">home</a>
+      <a href="../projects.html">projects</a>
+      <a href="../blog.html" class="active">blog</a>
+    </div>
+  </nav>
+  <main class="post-layout">
+    <a href="../blog.html" class="back-link">← back to blog</a>
+    <div class="post-header">
+      <div class="blog-meta"><span class="blog-date">April 2026</span><span class="blog-tag">Externship</span></div>
+      <h1>What I Built at Wayfair: AI Agents, n8n, and Competitive Intelligence</h1>
+      <p class="post-subtitle">How I built multi-agent workflows to automate trend detection and competitor tracking for the home goods sector.</p>
+    </div>
+    <div class="post-body">
+      <p>When I started the Wayfair AI externship in March 2026, the goal was straightforward on paper: build AI agents that could track competitor activity, detect trends, and generate content insights for the home goods category team. In practice, it turned into a crash course in agentic workflow design, data pipeline thinking, and the surprisingly tricky problem of getting multiple AI agents to produce output that's actually consistent enough to act on.</p>
+      <h2>The problem</h2>
+      <p>Category teams at e-commerce companies are constantly asking: what are competitors doing? What's trending? What should we do about it? Answering those questions manually takes hours a day. The goal was to reduce that to minutes.</p>
+      <h2>What I built</h2>
+      <p>A multi-agent pipeline using n8n with three main agents:</p>
+      <ul>
+        <li><strong>Trend Detection Agent</strong> — monitors consumer demand signals across home goods categories, pricing shifts, and product launch patterns.</li>
+        <li><strong>Competitor Tracking Agent</strong> — pulls and normalizes competitor activity into structured signals.</li>
+        <li><strong>Content Generation Agent</strong> — takes trend and competitor signals and generates draft insights and content recommendations.</li>
+      </ul>
+      <p>All three agents feed into a single live-updating Google Sheets dashboard integrating trend signals, competitive benchmarks, and AI-generated insights in one view.</p>
+      <h2>The hardest part</h2>
+      <p>It wasn't building individual agents — it was making outputs consistent enough across runs to be trustworthy. AI agents that produce different formats on different days are not useful in production. A lot of my work ended up being prompt engineering and output normalization to get structured, reliable data flowing downstream.</p>
+      <h2>Takeaway</h2>
+      <p>The interesting design question isn't "can I automate this?" — it's "what does the output need to look like for a human to actually trust and act on it?" That question drove every decision in this project.</p>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <strong>contact</strong>
+      <div class="footer-links">
+        <a href="mailto:jyothismaria2002@gmail.com">jyothismaria2002@gmail.com</a>
+        <a href="https://linkedin.com/in/jyothismaria" target="_blank">linkedin</a>
+        <a href="https://github.com/Jyothismaria" target="_blank">github</a>
+        <a href="tel:+19146193612">+1(914)619-3612</a>
+        <a href="../resume.pdf" target="_blank" class="resume-link">resumes</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fine-Tuning BERT for Stress Detection — Jyothismaria Joseph</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <nav>
+    <span class="nav-initials">jj</span>
+    <div class="nav-links">
+      <a href="../index.html">home</a>
+      <a href="../projects.html">projects</a>
+      <a href="../blog.html" class="active">blog</a>
+    </div>
+  </nav>
+  <main class="post-layout">
+    <a href="../blog.html" class="back-link">← back to blog</a>
+    <div class="post-header">
+      <div class="blog-meta"><span class="blog-date">March 2026</span><span class="blog-tag">NLP</span></div>
+      <h1>Fine-Tuning BERT for Stress Detection: Notes from the Trenches</h1>
+      <p class="post-subtitle">Why BERT outperformed RNNs and Transformers, what the confusion matrices revealed, and how transfer learning saved a small dataset.</p>
+    </div>
+    <div class="post-body">
+      <p>Classifying stress in text is a deceptively tricky problem. The language people use when stressed on Reddit looks superficially similar to language used in many other emotional contexts. Getting a model to reliably distinguish stress from general negativity requires picking up on subtle semantic and contextual cues.</p>
+      <h2>Why BERT won</h2>
+      <p>The RNN model showed systematic bias toward false negatives — missing stressed posts. The vanilla Transformer had the opposite problem: false positive bias, flagging too many posts as stressed. BERT was the only architecture that achieved balanced classification across both classes. The reason is transfer learning: BERT's pre-training gives it contextual embeddings that understand how words relate to each other in ways smaller architectures simply can't match on a limited training set.</p>
+      <h2>The numbers</h2>
+      <p>Fine-tuned BERT: Precision = 0.88, Recall = 0.87, F1 = 0.88, ROC-AUC = 0.94. The AUC is the number I'm most proud of — 0.94 means the model is genuinely discriminating, not just getting lucky on class balance.</p>
+      <h2>What I'd do differently</h2>
+      <p>More careful error analysis earlier. I spent time tuning hyperparameters before I looked closely at which posts were being misclassified. When I did, the pattern was obvious: sarcastic posts were the hard cases for every model. That insight should have driven the project from day one.</p>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <strong>contact</strong>
+      <div class="footer-links">
+        <a href="mailto:jyothismaria2002@gmail.com">jyothismaria2002@gmail.com</a>
+        <a href="https://linkedin.com/in/jyothismaria" target="_blank">linkedin</a>
+        <a href="https://github.com/Jyothismaria" target="_blank">github</a>
+        <a href="tel:+19146193612">+1(914)619-3612</a>
+        <a href="../resume.pdf" target="_blank" class="resume-link">resumes</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
