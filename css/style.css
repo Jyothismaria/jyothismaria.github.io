@@ -126,6 +126,11 @@ nav {
   padding-right: 3rem;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+}
+
+.hero-name h1 {
+  text-align: left;
 }
 
 .hero-name h1 {
@@ -156,7 +161,7 @@ nav {
   width: 100%;
   max-width: 380px;
   aspect-ratio: 1 / 1;
-  border-radius: 22px;
+  border-radius: 0;
   display: block;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
@@ -243,7 +248,7 @@ nav {
   content: '';
   position: absolute;
   inset: 0;
-  border-radius: 22px;
+  border-radius: 0;
   background: repeating-linear-gradient(
     0deg, transparent, transparent 3px,
     rgba(15,58,26,0.03) 3px, rgba(15,58,26,0.03) 4px
