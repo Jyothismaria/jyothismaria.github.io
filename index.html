@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jyothismaria Joseph</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav>
+    <span class="nav-initials">jj</span>
+    <div class="nav-links">
+      <a href="index.html" class="active">home</a>
+      <a href="projects.html">projects</a>
+      <a href="blog.html">blog</a>
+    </div>
+  </nav>
+
+  <main class="home-page">
+
+    <div class="hero-panel">
+      <div class="hero-name">
+        <h1>Jyothismaria<br/>Joseph</h1>
+      </div>
+      <div class="hero-divider-v"></div>
+      <div class="hero-photo">
+        <canvas id="portrait-canvas"></canvas>
+        <div class="photo-fallback">JJ</div>
+      </div>
+    </div>
+
+    <div class="hero-divider-h"></div>
+
+    <div class="about-section">
+      <h2 class="about-heading">About me</h2>
+      <div class="about-divider-v"></div>
+      <div class="about-body">
+        <p>I'm a data professional who genuinely loves turning messy, chaotic information into something clear, structured, and actually useful. Whether I'm profiling HPC jobs, building star-schema warehouses, or trying to convince Tableau not to break my filters again, I'm happiest when I'm solving problems with logic, creativity, and way too many color-coded notes.</p>
+        <p>I get excited about everything from clustering models to GANs to building dashboards that make people go, "Ohhh, that actually makes sense now." I enjoy digging into the why behind patterns, documenting every step (because future me deserves clarity), and designing solutions that feel clean, intuitive, and grounded in real data behavior.</p>
+        <p>At my core, I'm a curious, detail-obsessed data person who loves learning new tools, simplifying complexity, and using data to answer questions that matter — whether in HPC, analytics, or anywhere data decides to get interesting.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <strong>contact</strong>
+      <div class="footer-links">
+        <a href="mailto:jyothismaria2002@gmail.com">jyothismariajoseph@gmail.com</a>
+        <a href="https://linkedin.com/in/jyothismaria" target="_blank">linkedin</a>
+        <a href="https://github.com/Jyothismaria" target="_blank">github</a>
+        <a href="tel:+19146193612">+1(914)619-3612</a>
+        <a href="resume.pdf" target="_blank" class="resume-link">resumes</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/pixel-portrait.js"></script>
+  <script>
+    PixelPortrait.init('portrait-canvas', 'images/jj.png');
+  </script>
+</body>
+</html>
