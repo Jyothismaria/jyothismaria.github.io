@@ -134,16 +134,24 @@ nav {
 }
 
 .hero-name h1 {
-  text-align: left;
-}
-
-.hero-name h1 {
   font-family: var(--font-serif);
   font-size: clamp(2.8rem, 5vw, 4.5rem);
   font-weight: 700;
   color: var(--emerald-deep);
   line-height: 1.0;
   letter-spacing: -0.02em;
+  width: 100%;
+}
+
+.hero-tagline {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--emerald-mid);
+  letter-spacing: 0.14em;
+  margin-top: 0.85rem;
+  font-style: italic;
+  display: block;
+  width: 100%;
 }
 
 .hero-divider-v {
@@ -165,13 +173,14 @@ nav {
   width: 100%;
   max-width: 380px;
   aspect-ratio: 1 / 1;
-  border-radius: 0;
+  border-radius: 0 !important;
   display: block;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
   border: var(--border-heavy);
   filter: saturate(0.75) contrast(1.1);
   transition: filter 0.8s ease;
+  clip-path: inset(0);
 }
 
 #portrait-canvas.resolved {
@@ -194,16 +203,7 @@ nav {
 }
 
 /* ABOUT SECTION */
-.hero-tagline {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--emerald-mid);
-  letter-spacing: 0.14em;
-  margin-top: 0.85rem;
-  font-style: italic;
-  display: block;
-  width: 100%;
-}
+
 
 .about-section {
   background: var(--emerald-dark);
