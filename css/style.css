@@ -21,6 +21,9 @@
   --font-mono:   'Courier Prime', 'Courier New', monospace;
   --font-serif:  'Playfair Display', Georgia, serif;
 
+  --accent:        #4a9e4a;
+  --accent-bright: #6abf6a;
+  --green-light:   #8fb88f;
   --border-heavy: 3px solid var(--emerald-dark);
   --border-mid:   2px solid var(--emerald);
   --border-thin:  1px solid var(--emerald-mid);
@@ -190,49 +193,74 @@ nav {
 }
 
 /* ABOUT SECTION */
+.hero-tagline {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--emerald-mid);
+  letter-spacing: 0.14em;
+  margin-top: 0.85rem;
+  font-style: italic;
+}
+
 .about-section {
+  background: var(--emerald-dark);
   padding: 2.5rem 3rem 3rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-.about-heading {
+.about-label {
   font-family: var(--font-type);
-  font-size: 1rem;
-  letter-spacing: 0.14em;
-  color: var(--emerald-dark);
-  text-align: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  color: var(--accent-bright);
   text-transform: uppercase;
+  text-align: center;
   margin-bottom: 1.5rem;
-  position: relative;
-  padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-.about-heading::after {
+.about-label::before,
+.about-label::after {
   content: '';
-  position: absolute;
-  bottom: 0; left: 50%;
-  transform: translateX(-50%);
-  width: 40px; height: 2px;
+  flex: 1;
+  height: 1px;
   background: var(--emerald-mid);
+}
+
+.about-quote {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--mint-light);
+  line-height: 1.55;
+  margin-bottom: 1.75rem;
+  border-left: 3px solid var(--accent);
+  padding-left: 1.25rem;
 }
 
 .about-divider-v { display: none; }
 
 .about-body {
-  max-width: 700px;
-  width: 100%;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 
 .about-body p {
   font-family: var(--font-mono);
-  font-size: 0.83rem;
-  color: var(--text-mid);
-  line-height: 1.8;
-  text-align: center;
-  margin-bottom: 0.85em;
+  font-size: 0.8rem;
+  color: var(--green-light);
+  line-height: 1.85;
+  margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+  .about-body { grid-template-columns: 1fr; gap: 1rem; }
+  .about-quote { font-size: 1rem; }
+  .about-section { padding: 2rem 1.5rem; }
 }
 
 /* Pixel shimmer on photo */
