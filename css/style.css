@@ -269,9 +269,9 @@ p.hero-tagline, .hero-tagline {
 
 /* Pixel shimmer on photo */
 @keyframes pixelShimmer {
-  0%   { box-shadow: 0 0 0 0 var(--emerald-mid); }
-  50%  { box-shadow: 0 0 0 4px var(--emerald), 0 0 22px 4px rgba(45,122,61,0.3); }
-  100% { box-shadow: 0 0 0 0 var(--emerald-mid); }
+  0%   { box-shadow: none; }
+  50%  { box-shadow: none; }
+  100% { box-shadow: none; }
 }
 .hero-photo { animation: pixelShimmer 1.8s ease-in-out 3; }
 
@@ -1048,7 +1048,7 @@ footer {
   overflow: hidden;
   max-height: 0;
   transition: max-height .4s ease, padding .3s ease;
-  background: var(--cream);
+  background: #8fb88f;
   border-left: 3px solid var(--emerald-mid);
   padding: 0 1rem;
   margin-top: 0;
