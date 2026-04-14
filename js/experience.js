@@ -22,7 +22,7 @@ const expData = {
       'Developed interactive KPI dashboards and recurring ad-hoc reports for cross-functional stakeholders.',
       'Implemented reproducible ML workflows with cross-validation, precision, recall, and F1-score evaluation.'
     ],
-    tags: ['Python', 'scikit-learn', 'pandas', 'ML Pipelines', 'Power BI', 'MLflow']
+    tags: ['Python', 'scikit-learn', 'pandas', 'ML Pipelines']
   },
   'ta-stats': {
     role: 'Teaching Assistant — Statistical Learning II',
