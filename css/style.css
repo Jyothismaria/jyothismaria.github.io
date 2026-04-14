@@ -1075,14 +1075,14 @@ footer {
   margin-bottom: .25rem;
 }
 
-.vt-body li::before { content: "—"; position: absolute; left: 0; color: var(--emerald-mid); }
+.vt-body li::before { content: "—"; position: absolute; left: 0; color: #ffffff; }
 
 .vt-tags { display: flex; flex-wrap: wrap; gap: .3rem; }
 
 .vt-tags span {
   font-family: var(--font-mono);
   font-size: .6rem;
-  color: #ffffff;
+  color: var(--emerald-dark);
   border: 1px solid var(--emerald-mid);
   padding: .1rem .4rem;
   letter-spacing: .5px;
