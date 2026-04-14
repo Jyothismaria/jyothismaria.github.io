@@ -247,10 +247,9 @@ p.hero-tagline, .hero-tagline {
 
 .about-divider-v { display: none; }
 
-.about-body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+.about-body p {
+  font-size: 0.85rem;
+  line-height: 1.9;
 }
 
 .about-body p {
