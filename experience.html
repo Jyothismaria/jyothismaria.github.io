@@ -14,68 +14,191 @@
       <a href="projects.html">projects</a>
       <a href="experience.html" class="active">experience</a>
       <a href="blog.html">blog</a>
-      <a href="resume.pdf" target="_blank" class="resume-link">resumes</a>
     </div>
   </nav>
 
   <main class="exp-layout">
     <h1 class="page-title">Experience</h1>
 
-    <div class="timeline">
-      <div class="nodes-wrap" id="nodes">
+    <div class="exp-legend">
+      <div class="exp-legend-item"><div class="exp-legend-dot"></div> Work</div>
+      <div class="exp-legend-item"><div class="exp-legend-sq"></div> Education</div>
+    </div>
 
-        <div class="spine-line"></div>
+    <div class="vt">
+      <div class="spine"></div>
 
-        <div class="spine-year" style="left:5%">2023</div>
-        <div class="spine-year" style="left:30%">2024</div>
-        <div class="spine-year" style="left:60%">2025</div>
-        <div class="spine-year" style="left:92%">2026</div>
-
-        <div class="node bottom" style="left:5%" data-id="ccr-intern">
-          <div class="node-dot"></div>
-          <div class="node-line"></div>
-          <div class="node-info">
-            <div class="node-label">Research Intern<br/>UB CCR</div>
+      <!-- Mar 2026 LEFT — Wayfair -->
+      <div class="vt-row">
+        <div class="vt-card left" data-id="wayfair">
+          <div class="vt-date">Mar 2026 — Present</div>
+          <div class="vt-title">AI Extern</div>
+          <div class="vt-company">Wayfair · Remote</div>
+          <div class="vt-body open" id="body-wayfair">
+            <ul>
+              <li>Building AI agents using n8n to automate trend detection, competitor tracking, and content generation.</li>
+              <li>Trend analysis across home goods — pricing shifts, product launches, demand patterns.</li>
+              <li>Live-updating Google Sheets dashboard integrating trend signals and AI-generated insights.</li>
+              <li>Designing structured data pipelines for competitive intelligence reporting.</li>
+            </ul>
+            <div class="vt-tags"><span>n8n</span><span>AI Agents</span><span>Python</span><span>Google Sheets</span><span>Trend Analysis</span></div>
           </div>
         </div>
-
-        <div class="node top" style="left:30%" data-id="ta-sw">
-          <div class="node-info">
-            <div class="node-label">TA Software Quality<br/>UB</div>
-          </div>
-          <div class="node-line"></div>
-          <div class="node-dot"></div>
-        </div>
-
-        <div class="node bottom" style="left:55%" data-id="ccr-senior">
-          <div class="node-dot"></div>
-          <div class="node-line"></div>
-          <div class="node-info">
-            <div class="node-label">Sr. Research Aide<br/>UB CCR</div>
-          </div>
-        </div>
-
-        <div class="node top" style="left:72%" data-id="ta-stats">
-          <div class="node-info">
-            <div class="node-label">TA Stat Learning II<br/>UB</div>
-          </div>
-          <div class="node-line"></div>
-          <div class="node-dot"></div>
-        </div>
-
-        <div class="node top active" style="left:92%" data-id="wayfair">
-          <div class="node-info">
-            <div class="node-label">AI Extern<br/>Wayfair</div>
-          </div>
-          <div class="node-line"></div>
-          <div class="node-dot"></div>
-        </div>
-
+        <div class="vt-dot-col"><div class="vt-dot active" data-id="wayfair"></div></div>
+        <div class="vt-empty-right"></div>
       </div>
 
-      <div class="detail-panel open" id="detail-panel">
-        <div id="detail-content"></div>
+      <!-- Feb 2026 RIGHT — M.S. Grad -->
+      <div class="vt-row">
+        <div class="vt-empty-left"></div>
+        <div class="vt-dot-col"><div class="vt-dot edu" data-id="ms-grad"></div></div>
+        <div class="vt-card right" data-id="ms-grad">
+          <div class="vt-date">Feb 2026</div>
+          <div class="vt-title">M.S. Data Science — Graduating</div>
+          <div class="vt-company">University at Buffalo · GPA 3.9/4.0</div>
+          <div class="vt-body" id="body-ms-grad">
+            <ul>
+              <li>Completing Master of Science in Engineering Science — Data Science.</li>
+              <li>Graduate research in ML pipelines, data engineering, and applied analytics.</li>
+            </ul>
+            <div class="vt-tags"><span>Data Science</span><span>M.S.</span><span>GPA 3.9</span><span>Graduation</span></div>
+          </div>
+        </div>
       </div>
+
+      <!-- Aug 2025 LEFT — TA Stats -->
+      <div class="vt-row">
+        <div class="vt-card left" data-id="ta-stats">
+          <div class="vt-date">Aug 2025</div>
+          <div class="vt-title">TA — Statistical Learning II</div>
+          <div class="vt-company">University at Buffalo</div>
+          <div class="vt-body" id="body-ta-stats">
+            <ul>
+              <li>Bayesian ML, clustering, Gaussian mixture models, and Gaussian processes.</li>
+              <li>Weekly office hours and project mentorship in R.</li>
+              <li>Helped students build reproducible modeling pipelines.</li>
+            </ul>
+            <div class="vt-tags"><span>R</span><span>Bayesian ML</span><span>Gaussian Processes</span><span>Clustering</span></div>
+          </div>
+        </div>
+        <div class="vt-dot-col"><div class="vt-dot" data-id="ta-stats"></div></div>
+        <div class="vt-empty-right"></div>
+      </div>
+
+      <!-- Feb 2025 RIGHT — CCR Senior -->
+      <div class="vt-row">
+        <div class="vt-empty-left"></div>
+        <div class="vt-dot-col"><div class="vt-dot" data-id="ccr-senior"></div></div>
+        <div class="vt-card right" data-id="ccr-senior">
+          <div class="vt-date">Feb 2025</div>
+          <div class="vt-title">Senior Research Aide — Data Science</div>
+          <div class="vt-company">Center for Computational Research, UB</div>
+          <div class="vt-body" id="body-ccr-senior">
+            <ul>
+              <li>Applied ML models to 100K+ record datasets — improved accuracy from 14% to 62%.</li>
+              <li>Python ETL pipelines for feature engineering and model training.</li>
+              <li>KPI dashboards and recurring reports for cross-functional stakeholders.</li>
+              <li>Reproducible ML workflows with cross-validation and F1/precision/recall evaluation.</li>
+            </ul>
+            <div class="vt-tags"><span>Python</span><span>scikit-learn</span><span>pandas</span><span>ML Pipelines</span><span>Power BI</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aug 2024 LEFT — M.S. Start -->
+      <div class="vt-row">
+        <div class="vt-card left" data-id="ms-start">
+          <div class="vt-date">Aug 2024</div>
+          <div class="vt-title">M.S. Engineering Science — Data Science</div>
+          <div class="vt-company">University at Buffalo</div>
+          <div class="vt-body" id="body-ms-start">
+            <ul>
+              <li>Advanced coursework in ML, statistical learning, and data engineering.</li>
+              <li>Bayesian methods, applied ML, and large-scale data systems.</li>
+              <li>Maintained a 3.9 GPA across all graduate coursework.</li>
+            </ul>
+            <div class="vt-tags"><span>Data Science</span><span>Machine Learning</span><span>Statistical Learning</span><span>GPA 3.9</span></div>
+          </div>
+        </div>
+        <div class="vt-dot-col"><div class="vt-dot edu" data-id="ms-start"></div></div>
+        <div class="vt-empty-right"></div>
+      </div>
+
+      <!-- May 2024 RIGHT — B.S. Grad -->
+      <div class="vt-row">
+        <div class="vt-empty-left"></div>
+        <div class="vt-dot-col"><div class="vt-dot edu" data-id="bs-grad"></div></div>
+        <div class="vt-card right" data-id="bs-grad">
+          <div class="vt-date">May 2024</div>
+          <div class="vt-title">B.S. Computer Science — Graduated</div>
+          <div class="vt-company">University at Buffalo · GPA 3.73/4.0</div>
+          <div class="vt-body" id="body-bs-grad">
+            <ul>
+              <li>Completed Bachelor of Science in Computer Science.</li>
+              <li>Graduated after 4 years of coursework and research.</li>
+            </ul>
+            <div class="vt-tags"><span>Computer Science</span><span>GPA 3.73</span><span>Graduation</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jan 2024 LEFT — TA SW -->
+      <div class="vt-row">
+        <div class="vt-card left" data-id="ta-sw">
+          <div class="vt-date">Jan 2024</div>
+          <div class="vt-title">TA — Software Quality in Practice</div>
+          <div class="vt-company">University at Buffalo</div>
+          <div class="vt-body" id="body-ta-sw">
+            <ul>
+              <li>Led biweekly lab sessions for 27 students on debugging and software quality.</li>
+              <li>Guided fault isolation, root cause analysis, and test-driven debugging.</li>
+              <li>Technical feedback on testing workflows and code quality.</li>
+            </ul>
+            <div class="vt-tags"><span>Debugging</span><span>Static Analysis</span><span>Testing</span><span>Code Quality</span></div>
+          </div>
+        </div>
+        <div class="vt-dot-col"><div class="vt-dot" data-id="ta-sw"></div></div>
+        <div class="vt-empty-right"></div>
+      </div>
+
+      <!-- May 2023 RIGHT — CCR Intern -->
+      <div class="vt-row">
+        <div class="vt-empty-left"></div>
+        <div class="vt-dot-col"><div class="vt-dot" data-id="ccr-intern"></div></div>
+        <div class="vt-card right" data-id="ccr-intern">
+          <div class="vt-date">May 2023</div>
+          <div class="vt-title">Research Intern — Data Analysis</div>
+          <div class="vt-company">Center for Computational Research, UB</div>
+          <div class="vt-body" id="body-ccr-intern">
+            <ul>
+              <li>Reduced algorithm runtime from 40 min → 5 sec by reengineering in C++ (Rcpp).</li>
+              <li>Statistical time-series analysis of system usage patterns in R.</li>
+              <li>Presented at PEARC Conference peer-reviewed poster session.</li>
+            </ul>
+            <div class="vt-tags"><span>R</span><span>C++</span><span>OpenMPI</span><span>Time-Series</span><span>PEARC</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aug 2020 LEFT — B.S. Start -->
+      <div class="vt-row">
+        <div class="vt-card left" data-id="bs-cs">
+          <div class="vt-date">Aug 2020</div>
+          <div class="vt-title">B.S. Computer Science</div>
+          <div class="vt-company">University at Buffalo</div>
+          <div class="vt-body" id="body-bs-cs">
+            <ul>
+              <li>Computer Science — algorithms, data structures, software engineering.</li>
+              <li>Foundations in mathematics, statistics, and computational thinking.</li>
+              <li>Led Gold Team in UB Network Defense competition (2023).</li>
+            </ul>
+            <div class="vt-tags"><span>Computer Science</span><span>Algorithms</span><span>Software Engineering</span></div>
+          </div>
+        </div>
+        <div class="vt-dot-col"><div class="vt-dot edu" data-id="bs-cs"></div></div>
+        <div class="vt-empty-right"></div>
+      </div>
+
     </div>
   </main>
 
@@ -86,7 +209,8 @@
         <a href="mailto:jyothismaria2002@gmail.com">jyothismaria2002@gmail.com</a>
         <a href="https://linkedin.com/in/jyothismaria" target="_blank">linkedin</a>
         <a href="https://github.com/Jyothismaria" target="_blank">github</a>
-        
+        <a href="tel:+19146193612">+1(914)619-3612</a>
+        <a href="resume.pdf" target="_blank" class="resume-link">resumes</a>
       </div>
     </div>
   </footer>
