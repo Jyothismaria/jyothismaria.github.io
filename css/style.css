@@ -958,9 +958,9 @@ footer {
 
 /* Loading shimmer before image resolves */
 @keyframes pixelShimmer {
-  0%   { box-shadow: 0 0 0 3px var(--emerald-mid); }
-  50%  { box-shadow: 0 0 0 3px var(--emerald), 0 0 18px 2px rgba(45,122,61,0.4); }
-  100% { box-shadow: 0 0 0 3px var(--emerald-mid); }
+  0%   { box-shadow: none; }
+  50%  { box-shadow: none; }
+  100% { box-shadow: none; }
 }
 
 .photo-wrap {
