@@ -23,6 +23,7 @@ const PixelPortrait = (() => {
       canvas.height = size;
       canvas.style.borderRadius = '0';
       canvas.style.clipPath = 'none';
+      canvas.style.boxShadow = 'none';
 
       // Pixel sizes: coarse → fine
       const stages = [48, 28, 16, 10, 6, 3, 1];
