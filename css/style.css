@@ -1046,3 +1046,210 @@ footer {
 @media (max-width: 700px) {
   .exp-layout { padding: 2rem 1.25rem; }
 }
+
+/* ── EXPERIENCE TIMELINE ────────────────────────────────────────────────── */
+.exp-layout {
+  flex: 1;
+  padding: 2.5rem 3rem;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.timeline { position: relative; padding-bottom: 2rem; }
+
+.nodes-wrap {
+  position: relative;
+  margin: 0 20px;
+  height: 300px;
+}
+
+.spine-line {
+  position: absolute;
+  left: 0; right: 0;
+  top: 50%;
+  height: 3px;
+  background: var(--emerald-dark);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.spine-line::after {
+  content: '';
+  position: absolute;
+  right: -1px; top: 50%;
+  transform: translateY(-50%);
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 7px 0 7px 12px;
+  border-color: transparent transparent transparent var(--emerald-dark);
+}
+
+.spine-year {
+  position: absolute;
+  top: calc(50% + 10px);
+  font-family: var(--font-type);
+  font-size: 10px;
+  color: var(--text-muted);
+  transform: translateX(-50%);
+  z-index: 4;
+  letter-spacing: 1px;
+}
+
+.node {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.node.top {
+  flex-direction: column;
+  bottom: 50%;
+  justify-content: flex-end;
+}
+
+.node.bottom {
+  flex-direction: column;
+  top: 50%;
+  justify-content: flex-start;
+}
+
+.node-line {
+  width: 2px;
+  height: 50px;
+  background: var(--emerald-mid);
+  flex-shrink: 0;
+}
+
+.node-dot {
+  width: 14px;
+  height: 14px;
+  min-height: 14px;
+  border-radius: 50%;
+  background: var(--mint-light);
+  border: 3px solid var(--emerald-dark);
+  flex-shrink: 0;
+  transition: background 0.2s, transform 0.2s;
+  z-index: 3;
+}
+
+.node:hover .node-dot,
+.node.active .node-dot {
+  background: var(--emerald-dark);
+  transform: scale(1.3);
+}
+
+.node-info { text-align: center; padding: 6px 0; }
+
+.node-label {
+  font-family: var(--font-type);
+  font-size: 10px;
+  color: var(--emerald-dark);
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  max-width: 90px;
+}
+
+.node:hover .node-label,
+.node.active .node-label { color: var(--emerald-deep); font-weight: 700; }
+
+/* Detail accordion */
+.detail-panel {
+  background: var(--emerald-dark);
+  border: var(--border-heavy);
+  margin-top: 1.5rem;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 2rem;
+}
+
+.detail-panel.open {
+  max-height: 500px;
+  padding: 1.75rem 2rem;
+}
+
+.detail-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--emerald-mid);
+  padding-bottom: 1rem;
+}
+
+.detail-role {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--mint-light);
+}
+
+.detail-company {
+  font-family: var(--font-type);
+  font-size: 0.82rem;
+  color: var(--accent-bright);
+  letter-spacing: 2px;
+  margin-top: 0.25rem;
+}
+
+.detail-date {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-align: right;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  margin-left: 1rem;
+  flex-shrink: 0;
+}
+
+.detail-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.detail-bullets li {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--green-light);
+  line-height: 1.75;
+  padding-left: 1.25rem;
+  position: relative;
+  margin-bottom: 0.35rem;
+}
+
+.detail-bullets li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.detail-tags span {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--accent-bright);
+  border: 1px solid var(--emerald-mid);
+  padding: 0.1rem 0.5rem;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 700px) {
+  .exp-layout { padding: 2rem 1rem; }
+  .nodes-wrap { height: 260px; margin: 0 10px; }
+  .node-label { font-size: 9px; max-width: 70px; }
+  .detail-panel.open { padding: 1.25rem; }
+  .detail-top { flex-direction: column; gap: 0.5rem; }
+  .detail-date { text-align: left; margin-left: 0; }
+}
