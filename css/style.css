@@ -1048,8 +1048,9 @@ footer {
   overflow: hidden;
   max-height: 0;
   transition: max-height .4s ease, padding .3s ease;
-  background: #8fb88f;
-  border-left: 3px solid var(--emerald-mid);
+  background: #1a5c2a;
+  color: #ffffff;
+  border-left: 3px solid #1a5c2a;
   padding: 0 1rem;
   margin-top: 0;
   text-align: left;
@@ -1067,7 +1068,7 @@ footer {
 .vt-body li {
   font-family: var(--font-mono);
   font-size: .76rem;
-  color: var(--text-mid);
+  color: #ffffff;
   line-height: 1.75;
   padding-left: 1.1rem;
   position: relative;
@@ -1081,7 +1082,7 @@ footer {
 .vt-tags span {
   font-family: var(--font-mono);
   font-size: .6rem;
-  color: var(--emerald-dark);
+  color: #ffffff;
   border: 1px solid var(--emerald-mid);
   padding: .1rem .4rem;
   letter-spacing: .5px;
