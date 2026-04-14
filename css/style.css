@@ -257,7 +257,7 @@ p.hero-tagline, .hero-tagline {
   font-size: 0.8rem;
   color: var(--green-light);
   line-height: 1.85;
-  margin-bottom: 0;
+  margin-bottom: 1.25rem;
 }
 
 @media (max-width: 800px) {
