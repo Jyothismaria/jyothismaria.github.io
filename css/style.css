@@ -105,7 +105,6 @@ nav {
 /* ── HOME PAGE — matches mockup exactly ─────────────────────────────────── */
 .home-page {
   background: var(--mint-light);
-  flex: 1;
   display: flex;
   flex-direction: column;
   border: var(--border-heavy);
@@ -131,6 +130,7 @@ nav {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  gap: 0;
 }
 
 .hero-name h1 {
@@ -143,15 +143,17 @@ nav {
   width: 100%;
 }
 
-.hero-tagline {
+p.hero-tagline, .hero-tagline {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   color: var(--emerald-mid);
   letter-spacing: 0.14em;
-  margin-top: 0.85rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
   font-style: italic;
   display: block;
   width: 100%;
+  clear: both;
 }
 
 .hero-divider-v {
@@ -267,9 +269,9 @@ nav {
 
 /* Pixel shimmer on photo */
 @keyframes pixelShimmer {
-  0%   { box-shadow: none; }
-  50%  { box-shadow: none; }
-  100% { box-shadow: none; }
+  0%   { box-shadow: 0 0 0 0 var(--emerald-mid); }
+  50%  { box-shadow: 0 0 0 4px var(--emerald), 0 0 22px 4px rgba(45,122,61,0.3); }
+  100% { box-shadow: 0 0 0 0 var(--emerald-mid); }
 }
 .hero-photo { animation: pixelShimmer 1.8s ease-in-out 3; }
 
@@ -910,70 +912,137 @@ footer {
   .home-right { padding: 1.5rem; }
 }
 
-/* ── PIXEL PORTRAIT ─────────────────────────────────────────────────────── */
-.photo-wrap {
-  position: relative;
-  overflow: hidden;
-}
 
-#portrait-canvas {
+
+/* ── EXPERIENCE PAGE ────────────────────────────────────────────────────── */
+.exp-layout {
+  flex: 1;
+  padding: 2.5rem 3rem;
+  max-width: 900px;
+  margin: 0 auto;
   width: 100%;
-  height: 100%;
-  display: block;
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
-  border-radius: 0;
-  transition: filter 0.6s ease;
-  filter: saturate(0.7) contrast(1.1);
 }
 
-#portrait-canvas.resolved {
-  filter: saturate(1) contrast(1);
-  image-rendering: auto;
+.exp-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
-/* Scan-line overlay — vintage CRT feel */
-.photo-wrap::after {
+.exp-card {
+  background: var(--cream);
+  border: var(--border-mid);
+  padding: 1.5rem 1.75rem;
+  position: relative;
+  animation: revealUp 0.4s ease both;
+}
+
+.exp-card::before {
   content: '';
   position: absolute;
-  inset: 0;
-  border-radius: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(15, 58, 26, 0.04) 2px,
-    rgba(15, 58, 26, 0.04) 4px
-  );
-  pointer-events: none;
-  z-index: 2;
-  opacity: 1;
-  transition: opacity 1.2s ease;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: var(--emerald);
 }
 
-#portrait-canvas.resolved ~ .scanlines,
-.photo-wrap:has(#portrait-canvas.resolved)::after {
-  opacity: 0;
-}
+.exp-card:nth-child(1) { animation-delay: 0.05s; }
+.exp-card:nth-child(2) { animation-delay: 0.10s; }
+.exp-card:nth-child(3) { animation-delay: 0.15s; }
+.exp-card:nth-child(4) { animation-delay: 0.20s; }
+.exp-card:nth-child(5) { animation-delay: 0.25s; }
+.exp-card:nth-child(6) { animation-delay: 0.30s; }
 
-/* Loading shimmer before image resolves */
-@keyframes pixelShimmer {
-  0%   { box-shadow: none; }
-  50%  { box-shadow: none; }
-  100% { box-shadow: none; }
-}
-
-.photo-wrap {
-  animation: pixelShimmer 1.6s ease-in-out 3;
-}
-
-/* Home layout: make right side of header taller for the full photo */
-.name-photo-row {
+.exp-company-row {
+  display: flex;
   align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.2rem;
 }
 
-/* removed */
+.exp-company {
+  font-family: var(--font-type);
+  font-size: 0.95rem;
+  color: var(--emerald-dark);
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
 
-@media (max-width: 600px) {
-  .photo-wrap { width: 140px; height: 140px; }
+.exp-badge {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--emerald);
+  border: 1px solid var(--emerald-mid);
+  padding: 0.1rem 0.5rem;
+  background: var(--mint-light);
+  text-transform: uppercase;
+}
+
+.exp-title {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-dark);
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.exp-meta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.exp-divider {
+  height: 1px;
+  background: var(--emerald-mid);
+  opacity: 0.25;
+  margin: 0.9rem 0;
+}
+
+.exp-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.exp-bullets li {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+  padding-left: 1rem;
+  position: relative;
+  margin-bottom: 0.4rem;
+}
+
+.exp-bullets li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--emerald-mid);
+  font-size: 0.7rem;
+}
+
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.exp-tags span {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--emerald-dark);
+  border: 1px solid var(--emerald-mid);
+  padding: 0.15rem 0.55rem;
+  background: var(--mint-light);
+  letter-spacing: 0.04em;
+}
+
+.exp-edu::before { background: var(--emerald-mid); }
+
+@media (max-width: 700px) {
+  .exp-layout { padding: 2rem 1.25rem; }
 }
