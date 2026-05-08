@@ -1,4 +1,4 @@
-let activeId = 'wayfair';
+let activeId = 'pfizer';
 
 function toggle(id) {
   if (id === activeId) return;
