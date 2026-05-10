@@ -4,195 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Existing vs. Living -- Jyothismaria Joseph</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap');
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: #f5f4f0;
-      color: #1a1a18;
-      min-height: 100vh;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.2rem 2rem;
-      border-bottom: 0.5px solid rgba(0,0,0,0.12);
-      background: #ffffff;
-    }
-
-    .nav-initials {
-      font-family: 'Lora', serif;
-      font-size: 1.1rem;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      color: #1a1a18;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-    }
-
-    .nav-links a {
-      font-size: 0.8rem;
-      font-weight: 400;
-      text-decoration: none;
-      color: #666660;
-      letter-spacing: 0.03em;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover { color: #1a1a18; }
-    .nav-links a.active { color: #1a1a18; }
-
-    .nav-links .resume-link {
-      border: 0.5px solid rgba(0,0,0,0.25);
-      padding: 0.3rem 0.8rem;
-      border-radius: 20px;
-    }
-
-    main {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 3rem 2rem 5rem;
-    }
-
-    .back-link {
-      font-size: 0.78rem;
-      color: #666660;
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      display: inline-block;
-      margin-bottom: 2.5rem;
-      transition: color 0.2s;
-    }
-    .back-link:hover { color: #1a1a18; }
-
-    .blog-meta {
-      display: flex;
-      gap: 0.6rem;
-      align-items: center;
-      margin-bottom: 1.2rem;
-    }
-
-    .blog-date {
-      font-size: 0.75rem;
-      color: #999993;
-      letter-spacing: 0.04em;
-    }
-
-    .blog-tag {
-      font-size: 0.68rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      background: #eeeee8;
-      color: #666660;
-      padding: 0.2rem 0.65rem;
-      border-radius: 20px;
-      border: 0.5px solid rgba(0,0,0,0.1);
-    }
-
-    h1 {
-      font-family: 'Lora', serif;
-      font-size: 2rem;
-      font-weight: 500;
-      line-height: 1.25;
-      letter-spacing: -0.01em;
-      margin-bottom: 1rem;
-      color: #1a1a18;
-    }
-
-    .post-subtitle {
-      font-size: 1rem;
-      color: #666660;
-      line-height: 1.6;
-      font-style: italic;
-      font-family: 'Lora', serif;
-      margin-bottom: 2.5rem;
-      padding-bottom: 2.5rem;
-      border-bottom: 0.5px solid rgba(0,0,0,0.12);
-    }
-
-    .post-body p {
-      font-size: 0.97rem;
-      line-height: 1.85;
-      color: #1a1a18;
-      margin-bottom: 1.4rem;
-      font-weight: 300;
-    }
-
-    .post-body h2 {
-      font-family: 'Lora', serif;
-      font-size: 1.15rem;
-      font-weight: 500;
-      margin: 2.5rem 0 0.9rem;
-      color: #1a1a18;
-      letter-spacing: -0.005em;
-    }
-
-    .post-body em {
-      font-family: 'Lora', serif;
-      font-style: italic;
-    }
-
-    .post-body strong {
-      font-weight: 500;
-    }
-
-    .closing-question {
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 0.5px solid rgba(0,0,0,0.12);
-      font-size: 0.9rem;
-      color: #666660;
-      font-style: italic;
-      font-family: 'Lora', serif;
-      line-height: 1.7;
-    }
-
-    footer {
-      border-top: 0.5px solid rgba(0,0,0,0.12);
-      padding: 2rem;
-      background: #ffffff;
-    }
-
-    .footer-inner {
-      max-width: 680px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .footer-inner strong {
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #666660;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .footer-links a {
-      font-size: 0.78rem;
-      color: #666660;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .footer-links a:hover { color: #1a1a18; }
-  </style>
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
 
@@ -207,16 +19,14 @@
   </div>
 </nav>
 
-<main>
+<main class="post-layout">
   <a href="../blog.html" class="back-link">back to blog</a>
 
-  <div class="blog-meta">
-    <span class="blog-date">May 2026</span>
-    <span class="blog-tag">reflection</span>
+  <div class="post-header">
+    <div class="blog-meta"><span class="blog-date">May 2026</span><span class="blog-tag">reflection</span></div>
+    <h1>Existing vs. Living: What Late Night Drives Taught Me About Being in the 2%</h1>
+    <p class="post-subtitle">On post-COVID blur, spontaneous road trips, and what it actually feels like to show up to your own life.</p>
   </div>
-
-  <h1>Existing vs. Living: What Late Night Drives Taught Me About Being in the 2%</h1>
-  <p class="post-subtitle">On post-COVID blur, spontaneous road trips, and what it actually feels like to show up to your own life.</p>
 
   <div class="post-body">
 
@@ -254,13 +64,13 @@
 
     <h2>My 2% probably looks nothing like yours</h2>
 
-    <p>I want to be honest about something. The 2% Mishogi, the way Lind Siann talks about it, is about a physical and mental challenge, doing something grueling, pushing yourself through something most people would not attempt. It is structured, intentional, a defined feat.</p>
+    <p>I want to be clear about something because I think I was conflating two ideas. The Mishogi is its own thing, a defined personal challenge, something grueling and intentional that you do not post about. The doing is the point, not the sharing.</p>
 
-    <p>My version of it is not that. And I spent some time wondering if I was even using the term right.</p>
+    <p>The 2% is different. It is not about a single feat. It is about the fact that most people, given the choice between staying comfortable and actually showing up to their life, will choose comfort every time. The 2% are the ones who do not. Not because they are special or extreme, but because they refuse to sleepwalk through their own days.</p>
 
-    <p>But the more I sat with it, the more I think the core of the idea still holds, just applied differently. For me, the 2% was never about a challenge other people could measure. It was about crossing my own threshold. The things that lived in the "not me, not possible" category of my own mind. I was genuinely afraid of highway driving. And then somewhere between starting my masters and refusing to rot inside on a random Tuesday night, I was doing late runs to Niagara or random grocery hop with my roomates (cause i don't drink :) )without thinking twice. Nobody gave me a medal for that. But internally, something shifted. A ceiling moved.</p>
+    <p>And that is the part that resonated with me. I was genuinely afraid of highway driving. And then somewhere between starting my masters and refusing to rot inside on a random Tuesday night, I was doing late runs to Niagara or random grocery hops with my roommates (cause I don't drink :) ) without thinking twice. Nobody gave me a medal for that. But internally, something shifted. A ceiling moved.</p>
 
-    <p>That is the version that stuck with me. Not doing something unusual for the sake of being unusual. But doing something you genuinely believed you could not, and finding out you were wrong about yourself. It recalibrates what you think you are capable of, quietly, without any announcement.</p>
+    <p>Most people stay inside. Most people let the itch pass. The 2% scratch it. That is really all it is.</p>
 
     <h2>I do not know if it is just me</h2>
 
