@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Existing vs. Living -- Jyothismaria Joseph</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #f5f4f0;
+      color: #1a1a18;
+      min-height: 100vh;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      border-bottom: 0.5px solid rgba(0,0,0,0.12);
+      background: #ffffff;
+    }
+
+    .nav-initials {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      color: #1a1a18;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.8rem;
+      font-weight: 400;
+      text-decoration: none;
+      color: #666660;
+      letter-spacing: 0.03em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: #1a1a18; }
+    .nav-links a.active { color: #1a1a18; }
+
+    .nav-links .resume-link {
+      border: 0.5px solid rgba(0,0,0,0.25);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+    }
+
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    .back-link {
+      font-size: 0.78rem;
+      color: #666660;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      display: inline-block;
+      margin-bottom: 2.5rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: #1a1a18; }
+
+    .blog-meta {
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+      margin-bottom: 1.2rem;
+    }
+
+    .blog-date {
+      font-size: 0.75rem;
+      color: #999993;
+      letter-spacing: 0.04em;
+    }
+
+    .blog-tag {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: #eeeee8;
+      color: #666660;
+      padding: 0.2rem 0.65rem;
+      border-radius: 20px;
+      border: 0.5px solid rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      margin-bottom: 1rem;
+      color: #1a1a18;
+    }
+
+    .post-subtitle {
+      font-size: 1rem;
+      color: #666660;
+      line-height: 1.6;
+      font-style: italic;
+      font-family: 'Lora', serif;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 0.5px solid rgba(0,0,0,0.12);
+    }
+
+    .post-body p {
+      font-size: 0.97rem;
+      line-height: 1.85;
+      color: #1a1a18;
+      margin-bottom: 1.4rem;
+      font-weight: 300;
+    }
+
+    .post-body h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin: 2.5rem 0 0.9rem;
+      color: #1a1a18;
+      letter-spacing: -0.005em;
+    }
+
+    .post-body em {
+      font-family: 'Lora', serif;
+      font-style: italic;
+    }
+
+    .post-body strong {
+      font-weight: 500;
+    }
+
+    .closing-question {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 0.5px solid rgba(0,0,0,0.12);
+      font-size: 0.9rem;
+      color: #666660;
+      font-style: italic;
+      font-family: 'Lora', serif;
+      line-height: 1.7;
+    }
+
+    footer {
+      border-top: 0.5px solid rgba(0,0,0,0.12);
+      padding: 2rem;
+      background: #ffffff;
+    }
+
+    .footer-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-inner strong {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #666660;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-links a {
+      font-size: 0.78rem;
+      color: #666660;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: #1a1a18; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-initials">jj</span>
+  <div class="nav-links">
+    <a href="../index.html">home</a>
+    <a href="../projects.html">projects</a>
+    <a href="../experience.html">experience</a>
+    <a href="../blog.html" class="active">blog</a>
+    <a href="../resume.pdf" target="_blank" class="resume-link">resume</a>
+  </div>
+</nav>
+
+<main>
+  <a href="../blog.html" class="back-link">back to blog</a>
+
+  <div class="blog-meta">
+    <span class="blog-date">May 2026</span>
+    <span class="blog-tag">reflection</span>
+  </div>
+
+  <h1>Existing vs. Living: What Late Night Drives Taught Me About Being in the 2%</h1>
+  <p class="post-subtitle">On post-COVID blur, spontaneous road trips, and what it actually feels like to show up to your own life.</p>
+
+  <div class="post-body">
+
+    <p>I have been following Lind Siann on YouTube lately, and one idea has been stuck in my head ever since: the concept of the <strong>2% Mishogi</strong> and the difference between simply <em>existing</em> and actually <em>living</em>. It hit closer to home than I expected.</p>
+
+    <h2>When the days just blurred</h2>
+
+    <p>Post-COVID, life moved fast. And not in a good way. Looking back, I struggle to find real placeholders, moments I can point to and say <em>that</em> mattered. Other than graduation, most of my undergrad days were a blur of tasks, career checkboxes, and a quiet but persistent existential crisis. I kept pushing through it all with one belief holding me together: <em>once these things are done, I will be fine.</em></p>
+
+    <p>But fine never quite arrived. Nothing felt significant. The days just went by.</p>
+
+    <h2>Something shifted in my masters</h2>
+
+    <p>When I started my masters, things began to change, slowly, then all at once. I started socializing more. I got my license. I started driving, then overdriving. I took way too many road trips for someone who both works and studies full time.</p>
+
+    <p>And somewhere in all of that, I started actually living.</p>
+
+    <p>I would say the itch did not just develop out of thin air either. Finding the right people, opening up to them, letting them in, that had a lot to do with it. The right people have a way of making you braver about your own life.</p>
+
+    <h2>The drives I will never forget</h2>
+
+    <p>It would start with nothing more than a feeling, a restlessness, an itch, a refusal to spend another night inside staring at the same four walls. And the next thing I knew, I was on the road.</p>
+
+    <p>Late night drives to <strong>Niagara</strong>, the kind where you show up just to stand near something massive and loud and remind yourself the world is bigger than your apartment and your deadlines. Spontaneously planned trips to <strong>Cleveland</strong>, and yes, spontaneously planned is exactly the right contradiction, because there was just enough intention to get in the car but never enough to feel like an itinerary. And then all across <strong>WNY</strong>, back roads, main streets, places I had no reason to be at midnight, places that looked completely different at 2am than they ever would in daylight.</p>
+
+    <p>No destination. No agenda. Sometimes getting lost. Sometimes getting into arguments. Always feeling something.</p>
+
+    <p>These were not vacations. They were not productive. They did not belong on a resume or a to-do list. They were just mine, chosen, spontaneous, and completely alive in a way that nothing assigned or scheduled ever managed to be.</p>
+
+    <h2>The difference was presence</h2>
+
+    <p>There is something about choosing to move, irrationally, just because you refuse to let the day be nothing, that makes life feel real. Those drives had texture. They had stakes. They were <em>mine.</em></p>
+
+    <p>It really felt like I was living my life rather than just watching it pass by. Present, not performing. Choosing, not just completing. That is what pre-COVID felt like too, if I am honest. And somewhere in the pandemic's collapse of time and routine, that aliveness got quietly buried under busyness.</p>
+
+    <h2>My 2% probably looks nothing like yours</h2>
+
+    <p>I want to be honest about something. The 2% Mishogi, the way Lind Siann talks about it, is about a physical and mental challenge, doing something grueling, pushing yourself through something most people would not attempt. It is structured, intentional, a defined feat.</p>
+
+    <p>My version of it is not that. And I spent some time wondering if I was even using the term right.</p>
+
+    <p>But the more I sat with it, the more I think the core of the idea still holds, just applied differently. For me, the 2% was never about a challenge other people could measure. It was about crossing my own threshold. The things that lived in the "not me, not possible" category of my own mind. I was genuinely afraid of highway driving. And then somewhere between starting my masters and refusing to rot inside on a random Tuesday night, I was doing late runs to Niagara or random grocery hop with my roomates (cause i don't drink :) )without thinking twice. Nobody gave me a medal for that. But internally, something shifted. A ceiling moved.</p>
+
+    <p>That is the version that stuck with me. Not doing something unusual for the sake of being unusual. But doing something you genuinely believed you could not, and finding out you were wrong about yourself. It recalibrates what you think you are capable of, quietly, without any announcement.</p>
+
+    <h2>I do not know if it is just me</h2>
+
+    <p>Maybe the post-COVID blur is universal. Maybe everyone is moving fast through days that leave no mark. Or maybe some people found their version of the late night drive, their way of refusing to just exist.</p>
+
+    <p>I think that is what the 2% idea is really about at its heart, whatever shape it takes for you. Not perfection. Not productivity. Just the commitment to actually show up to your own life, even if it is just a spontaneous drive down a highway at midnight with nowhere specific to be.</p>
+
+    <p class="closing-question">What does living, not just existing, look like for you?</p>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <strong>contact</strong>
+    <div class="footer-links">
+      <a href="mailto:jyothismaria2002@gmail.com">jyothismaria2002@gmail.com</a>
+      <a href="https://linkedin.com/in/jyothismaria" target="_blank">linkedin</a>
+      <a href="https://github.com/Jyothismaria" target="_blank">github</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
