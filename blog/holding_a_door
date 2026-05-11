@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Art of Holding the Door -- Jyothismaria Joseph</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<nav>
+  <span class="nav-initials">jj</span>
+  <div class="nav-links">
+    <a href="../index.html">home</a>
+    <a href="../projects.html">projects</a>
+    <a href="../experience.html">experience</a>
+    <a href="../blog.html" class="active">blog</a>
+    <a href="../resume.pdf" target="_blank" class="resume-link">resume</a>
+  </div>
+</nav>
+
+<main class="post-layout">
+  <a href="../blog.html" class="back-link">back to blog</a>
+
+  <div class="post-header">
+    <div class="blog-meta"><span class="blog-date">May 2026</span><span class="blog-tag">reflection</span></div>
+    <h1>The Art of Holding the Door</h1>
+    <p class="post-subtitle">Who knew a door could do all that.</p>
+  </div>
+
+  <div class="post-body">
+
+    <p>It was just a door. I held it open out of habit, the way you do without thinking, because someone was behind you and it would have been weird not to. I did not know her. I was not trying to make a good impression. I just held the door.</p>
+
+    <p>She was not used to it. That small, automatic thing I had done a thousand times without registering was something she noticed. And because she noticed, she said something. And because she said something, we started talking. And that conversation became a friendship that ended up being one of the most significant ones of my masters.</p>
+
+    <p>It is genuinely hard to overstate how much followed from that one moment. Through her and the world that opened up, I met people I never would have otherwise. People with perspectives I found fascinating, some I disagreed with completely, some I did not particularly like if I am being honest. But every single one of them gave me something, a glimpse into how differently people move through the world, how they process things, how they respond, what they value, what they protect.</p>
+
+    <p>You do not get that sitting in your room. You get that by being around people, and sometimes you get around people because of something as unremarkable as a held door.</p>
+
+    <p>I think about that a lot. How the things that end up mattering most are rarely the things you planned or prepared for. Nobody puts "hold door, change life" on their to-do list. It just happens, quietly, in the margins of an ordinary day.</p>
+
+    <p>And maybe that is the whole point. You cannot engineer those moments. You can just try to be the kind of person who holds the door, and see who walks through it.</p>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <strong>contact</strong>
+    <div class="footer-links">
+      <a href="mailto:jyothismaria2002@gmail.com">jyothismaria2002@gmail.com</a>
+      <a href="https://linkedin.com/in/jyothismaria" target="_blank">linkedin</a>
+      <a href="https://github.com/Jyothismaria" target="_blank">github</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
